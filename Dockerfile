@@ -58,6 +58,7 @@ RUN ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 ADD dotfiles /root/.dotfiles
 RUN /root/.dotfiles/script/install
 RUN echo 'Diogo Doreto\ndiogo.doreto@gmail.com' | /root/.dotfiles/script/bootstrap
+RUN chmod 400 /root/.ssh/id_rsa
 
 # Vundle install plugins
 RUN vim +PluginInstall +qall
